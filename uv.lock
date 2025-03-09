@@ -93,6 +93,7 @@ dependencies = [
     { name = "click" },
     { name = "numpy" },
     { name = "pillow" },
+    { name = "platformdirs" },
     { name = "python-dateutil" },
     { name = "python-dotenv" },
     { name = "pyyaml" },
@@ -113,6 +114,7 @@ requires-dist = [
     { name = "click", specifier = ">=8.1.8" },
     { name = "numpy", specifier = ">=2.2.3" },
     { name = "pillow", specifier = ">=11.1.0" },
+    { name = "platformdirs", directory = "../platformdirs" },
     { name = "python-dateutil", specifier = ">=2.9.0.post0" },
     { name = "python-dotenv", specifier = ">=1.0.1" },
     { name = "pyyaml", specifier = ">=6.0.2" },
@@ -186,6 +188,25 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/d7/6c/6ec83ee2f6f0fda8d4cf89045c6be4b0373ebfc363ba8538f8c999f63fcd/pillow-11.1.0-cp313-cp313t-win_amd64.whl", hash = "sha256:ad5db5781c774ab9a9b2c4302bbf0c1014960a0a7be63278d13ae6fdf88126fe", size = 2631595 },
     { url = "https://files.pythonhosted.org/packages/cf/6c/41c21c6c8af92b9fea313aa47c75de49e2f9a467964ee33eb0135d47eb64/pillow-11.1.0-cp313-cp313t-win_arm64.whl", hash = "sha256:67cd427c68926108778a9005f2a04adbd5e67c442ed21d95389fe1d595458756", size = 2377651 },
 ]
+
+[[package]]
+name = "platformdirs"
+source = { directory = "../platformdirs" }
+
+[package.metadata]
+requires-dist = [
+    { name = "appdirs", marker = "extra == 'test'", specifier = "==1.4.4" },
+    { name = "covdefaults", marker = "extra == 'test'", specifier = ">=2.3" },
+    { name = "furo", marker = "extra == 'docs'", specifier = ">=2024.8.6" },
+    { name = "mypy", marker = "extra == 'type'", specifier = ">=1.14.1" },
+    { name = "proselint", marker = "extra == 'docs'", specifier = ">=0.14" },
+    { name = "pytest", marker = "extra == 'test'", specifier = ">=8.3.4" },
+    { name = "pytest-cov", marker = "extra == 'test'", specifier = ">=6" },
+    { name = "pytest-mock", marker = "extra == 'test'", specifier = ">=3.14" },
+    { name = "sphinx", marker = "extra == 'docs'", specifier = ">=8.1.3" },
+    { name = "sphinx-autodoc-typehints", marker = "extra == 'docs'", specifier = ">=3" },
+]
+provides-extras = ["docs", "test", "type"]
 
 [[package]]
 name = "pluggy"
